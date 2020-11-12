@@ -2,24 +2,18 @@
  box-sizing: border-box
 }
 
-/* The Universal Selector */
 *, /* All elements*/
 *::before, /* All ::before pseudo-elements */
 *::after { /* All ::after pseudo-elements */
- /* height & width will now include border & padding by default
-    but can be over-ridden as needed */
  box-sizing: inherit;
 }
 
-/* resets font size to be 62.5% of the user preference - 
-  in most browser configurations this will be 10px */
 :root {
  font-size: 62.5%
 }
 
 body {
  background-color: #48304D;
-/* Use a system font, if none are available use an available sans-sarif   font */
  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
  margin: 0;
@@ -30,8 +24,18 @@ body {
  grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
 }
 
-h3{
+blockquote {
+  border-left: 3px solid hotpink;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+#name{
     margin-bottom: auto;
+}
+
+#bio{
+    display: none;
 }
 
 .checked {
@@ -46,43 +50,29 @@ h3{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3fr 1fr 2fr 1fr;
     grid-template-areas: 
-    "icon icon"
+    "identity identity"
     "prof prof"
     "rates rates"
     "call mssg";
+    box-shadow: 10px 10px 5px black;
 }
 
-
-
 #identity{
-    grid-area: icon;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    grid-area: identity;
 }
 
 #profession{
     background-color: #FBCAEF;
     grid-area: prof;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 #rates{
     grid-area: rates;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 #callIcon{
     background-color: hotpink;
     grid-area: call;
-
 }
 
 #mssgIcon{
@@ -97,6 +87,14 @@ h3{
     margin-bottom: auto;
 }
 
+.cardContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
 .status{
     color: green;
     font-weight: bolder;
@@ -105,4 +103,75 @@ h3{
     margin-bottom: auto;
 }
 
+.icon{
+    max-width: 20%;
+    height: auto;
+}
 
+@media only screen and (min-width: 768px) {
+    body{
+        grid-template-columns: 1fr 1fr 10fr 1fr 1fr ;
+        grid-template-rows: 2.5fr 1fr 1fr 1fr 2.5fr;
+    }
+
+    .card{
+        grid-template-columns: 20% 20% 60%;
+        grid-template-rows: 4fr 1fr;
+        grid-template-areas: 
+        "identity identity bio"
+        "call mssg bio";
+    }
+
+    .vtOnly{
+        display: none;
+    }
+
+    .cardContent{
+        border: none;
+    }
+
+      #bio{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        grid-area: bio;
+        background-color: #F1E4F3;
+        justify-content: center;
+
+    }
+
+    #identity{
+        grid-area: identity;
+    }   
+
+    #callIcon{
+        grid-area: call;
+    }
+
+    #mssgIcon{
+        grid-area: mssg;
+    }
+
+    .status{
+        margin-right: auto;
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 260px) {
+    .card{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1245px) {
+  #profilePic{
+       max-width: 30%;
+  }
+
+  .icon{
+      max-width: 10%;
+  }
+}
