@@ -108,7 +108,7 @@ blockquote {
     height: auto;
 }
 
-@media only screen and (min-width: 804px) {
+@media only screen and (min-width: 768px) {
     body{
         grid-template-columns: 1fr 1fr 10fr 1fr 1fr ;
         grid-template-rows: 2.5fr 1fr 1fr 1fr 2.5fr;
@@ -173,5 +173,15 @@ blockquote {
 
   .icon{
       max-width: 10%;
+  }
+}
+
+@media only screen and (min-width: 1950px) {
+  #profilePic{
+       max-width: 20%;
+  }
+
+  .icon{
+      max-width: 5%;
   }
 }
