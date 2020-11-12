@@ -20,7 +20,7 @@ body {
  display: grid;
  height: 100vh;
  min-height: 100vh;
- grid-template-columns: 1fr 1fr 3fr 1fr 1fr ;
+ grid-template-columns: 1fr 1fr 3.5fr 1fr 1fr ;
  grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
 }
 
@@ -92,7 +92,7 @@ blockquote {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid black;
+    border: .2px solid black;
 }
 
 .status{
@@ -108,7 +108,7 @@ blockquote {
     height: auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 804px) {
     body{
         grid-template-columns: 1fr 1fr 10fr 1fr 1fr ;
         grid-template-rows: 2.5fr 1fr 1fr 1fr 2.5fr;
@@ -166,7 +166,7 @@ blockquote {
     }
 }
 
-@media only screen and (min-width: 1245px) {
+@media only screen and (min-width: 1050px) {
   #profilePic{
        max-width: 30%;
   }
