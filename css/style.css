@@ -18,9 +18,91 @@
 }
 
 body {
- background-color: gray;
+ background-color: #48304D;
 /* Use a system font, if none are available use an available sans-sarif   font */
  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
  margin: 0;
+ display: grid;
+ height: 100vh;
+ min-height: 100vh;
+ grid-template-columns: 1fr 1fr 3fr 1fr 1fr ;
+ grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
 }
+
+h3{
+    margin-bottom: auto;
+}
+
+.checked {
+  color: #E637BF;
+}
+
+.card{
+    background-color: aliceblue;
+    grid-column: 3/4;
+    grid-row: 2/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr 2fr 1fr;
+    grid-template-areas: 
+    "icon icon"
+    "prof prof"
+    "rates rates"
+    "call mssg";
+}
+
+
+
+#identity{
+    grid-area: icon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#profession{
+    background-color: #FBCAEF;
+    grid-area: prof;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#rates{
+    grid-area: rates;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#callIcon{
+    background-color: hotpink;
+    grid-area: call;
+
+}
+
+#mssgIcon{
+    background-color: #F686BD;
+    grid-area: mssg;
+}
+
+#profilePic{
+    border-radius: 50%;
+    max-width: 50%;
+    height: auto;
+    margin-bottom: auto;
+}
+
+.status{
+    color: green;
+    font-weight: bolder;
+    margin-left: auto;
+    padding-right: 5px;
+    margin-bottom: auto;
+}
+
+
