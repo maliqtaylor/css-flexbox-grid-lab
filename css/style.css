@@ -55,6 +55,7 @@ blockquote {
     "rates rates"
     "call mssg";
     box-shadow: 10px 10px 5px black;
+    min-height: 258px;
 }
 
 #identity{
@@ -108,7 +109,7 @@ blockquote {
     height: auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 540px) {
     body{
         grid-template-columns: 1fr 1fr 10fr 1fr 1fr ;
         grid-template-rows: 2.5fr 1fr 1fr 1fr 2.5fr;
@@ -168,20 +169,20 @@ blockquote {
 
 @media only screen and (min-width: 1050px) {
   #profilePic{
-       max-width: 30%;
+       max-width: 35%;
   }
 
   .icon{
-      max-width: 10%;
+      max-width: 12%;
   }
 }
 
 @media only screen and (min-width: 1950px) {
   #profilePic{
-       max-width: 20%;
+       max-width: 25%;
   }
 
   .icon{
-      max-width: 5%;
+      max-width: 7%;
   }
 }
